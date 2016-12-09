@@ -1,0 +1,21 @@
+.ullist {
+    padding-left: 3.5em;
+
+    & li {
+        position: relative;
+        left: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: .2em;
+            height: .2em;
+            border-radius: 50%;
+            top: 50%; /* opera mini */
+            top: calc(50% - .2em / 2);
+            left: -1.1em;
+            background-color: var(--blue-color-dark);
+            text-align: right;
+        }
+    }
+}

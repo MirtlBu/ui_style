@@ -1,0 +1,39 @@
+.link {
+    text-decoration: none;
+    color: var(--blue-color-dark);
+    background-position: 0 1.1em !important;
+    text-decoration: none;
+    outline: none;
+
+    &:hover, &:focus {
+        color: var(--blue-color-medium);
+    }
+
+    &--solid {
+        background: linear-gradient(var(--blue-color-dark), var(--blue-color-dark)) no-repeat;
+        background-size: 100% 1px !important;
+
+        &:hover, &:focus {
+            background: linear-gradient(var(--blue-color-medium), var(--blue-color-medium)) no-repeat;
+        }
+    }
+
+    &--dashed {
+        background: linear-gradient(90deg, var(--blue-color-dark) 60%, transparent 0) repeat-x;
+        background-size: .5em 1px !important;
+
+        &:hover, &:focus {
+            background: linear-gradient(90deg, var(--blue-color-medium) 60%, transparent 0) repeat-x;
+        }
+    }
+}
+
+@-moz-document url-prefix() {
+    .link {
+        background-position: 0 1.2em !important;
+    }
+}
+
+.ie-link {
+    text-decoration: underline;
+}

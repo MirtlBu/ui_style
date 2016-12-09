@@ -1,0 +1,181 @@
+.input {
+    outline: none;
+    padding: 0 1em;
+    border: 1px solid var(--form-border-color);
+    font-size: 1em;
+    line-height: 2.5;
+    border-radius: .125em;
+    font-weight: 400;
+    font-family: var(--main-font);
+    color: var(--gray-color-medium);
+    box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+
+    &--invalid {
+        border: 1px solid var(--invalid-color-medium);
+        background-color: var(--invalid-color-light);
+    }
+
+    &--textarea {
+        resize: none;
+    }
+
+    &:focus {
+        border: 1px solid var(--valid-color-medium);
+        background-color: var(--white-color) !important;
+    }
+
+    &:disabled{
+        background-color: var(--gray-color-light);
+        color: var(--form-disabled-color);
+    }
+}
+
+.label {
+
+    &--input {
+
+        & .label--text {
+            margin-bottom: 0.55em;
+        }
+    }
+
+    &--shape {
+        width: 1.25em;
+        height: 1.25em;
+        border: 1px solid var(--form-border-color);
+        background-color: var(--white-color);
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+        &:before {
+            content: none;
+            position: absolute;
+        }
+    }
+
+    &--checkbox {
+
+        & .label--shape {
+
+            &:before {
+                width: 1em;
+                height: 1em;
+                background-image: url(img/checked.png);
+                background-size: auto 1em;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: calc(50% - 1em/2);
+                top: calc(50% - 1em/2);
+            }
+        }
+    }
+
+    &--radio {
+
+        & .label--shape {
+            border-radius: 50%;
+
+            &:before {
+                width: .5em;
+                height: .5em;
+                background-color: var(--gray-color-medium);
+                border-radius: 50%;
+                top: calc(50% - .5em/2);
+                left: calc(50% - .5em/2);
+            }
+        }
+    }
+
+    &--checkbox, &--radio {
+        cursor: pointer;
+
+        & .input {
+            position: absolute;
+            left: -9999px;
+
+            &:checked ~ .label--shape {
+
+                &:before {
+                    content: '';
+                }
+            }
+
+            &:focus ~ .label--shape {
+                border: 1px solid var(--valid-color-medium);
+                background-color: var(--white-color) !important;
+            }
+        }
+
+        & .label--text {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5em;
+        }
+    }
+
+    &--file {
+
+        & .input {
+            position: absolute;
+            left: -9999px;
+
+            &:focus ~ .button--blue {
+                color: var(--white-color);
+                background-color: var(--blue-color-medium);
+                border-color: var(--blue-color-medium);
+            }
+        }
+    }
+}
+
+.alert {
+    width: 100%;
+    min-height: 42px;
+    color: var(--white-color);
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: var(--main-font);
+    border-radius: .125em;
+    padding: .825em 3.125em .825em 1.25em;
+    box-sizing: border-box;
+    position: relative;
+
+    &__close {
+        width: 1.25em;
+        height: 1.25em;
+        position: absolute;
+        right: 1em;
+        top: .7em;
+        background-image: url(img/circle-close.png);
+        background-size: 1.25em 1.25em;
+        background-repeat: no-repeat;
+        background-position: .25em .25em;
+        cursor: pointer;
+        opacity: .7;
+        padding: .25em;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+
+    &--primary {
+        background-color: var(--blue-color-medium);
+    }
+
+    &--valid {
+        background-color: var(--valid-color-medium);
+    }
+
+    &--invalid {
+        background-color: var(--invalid-color-medium);
+    }
+
+    &--closed {
+        display: none;
+    }
+}

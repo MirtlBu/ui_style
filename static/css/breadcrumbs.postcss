@@ -1,0 +1,134 @@
+.breadcrumbs {
+    font-size: 0;
+
+    &__item {
+        line-height: 3.125em;
+        height: 3.125em;
+        color: var(--gray-color-dark);
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--main-font);
+        padding: 0 1.5625em 0 2.875em;
+        box-sizing: border-box;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        @apply --thin-border;
+        border-top-color: var(--form-border-color);
+        border-bottom-color: var(--form-border-color);
+        border-left-color: transparent;
+        border-right-color: transparent;
+        margin-left: -1px;
+        outline: none;
+
+        &:before {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 1.5625em solid transparent;
+            border-bottom: 1.5625em solid transparent;
+            border-left: 1.5625em solid transparent;
+            top: -1px;
+            left: -1.625em;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            top: 0.375em;
+            right: -1.0625em;
+            width: 2.0625em;
+            height: 2.125em;
+            transform: rotate(-45deg);
+            @apply --thin-border;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: var(--form-border-color);
+            border-right-color: var(--form-border-color);
+        }
+
+        &:hover, &:focus {
+            color: var(--white-color);
+            background-color: var(--blue-color-medium);
+            border-top-color: var(--blue-color-medium);
+            border-bottom-color: var(--blue-color-medium);
+            margin-left: 1.375em;
+            padding-left: 1.4375em;
+
+            &:before {
+                border-top: 1.5625em solid var(--blue-color-medium);
+                border-bottom: 1.5625em solid var(--blue-color-medium);
+                border-left: 1.5625em solid transparent;
+            }
+
+            &:after {
+                background-color: var(--blue-color-medium);
+                border-bottom-color: var(--blue-color-medium);
+                border-right-color: var(--blue-color-medium);
+            }
+
+            &:first-child {
+                border-left-color: transparent !important;
+                margin-left: 0;
+            }
+
+            &:last-child {
+                border-right-color: transparent !important;
+            }
+        }
+
+        &--active, &--active:hover, &--active:focus {
+            color: var(--white-color);
+            background-color: var(--blue-color-dark);
+            border-top-color: var(--blue-color-dark);
+            border-bottom-color: var(--blue-color-dark);
+            margin-left: 1.375em;
+            padding-left: 1.4375em;
+
+            &:after {
+                background-color: var(--blue-color-dark);
+                border-bottom-color: var(--blue-color-dark);
+                border-right-color: var(--blue-color-dark);
+            }
+
+            &:before {
+                border-top: 1.5625em solid var(--blue-color-dark);
+                border-bottom: 1.5625em solid var(--blue-color-dark);
+                border-left: 1.5625em solid transparent;
+            }
+
+            &:first-child {
+                border-left-color: transparent !important;
+                margin-left: 0;
+            }
+
+            &:last-child {
+                border-right-color: transparent !important;
+            }
+        }
+
+        &:first-child {
+            border-left-color: var(--form-border-color);
+            border-bottom-left-radius: .125em;
+            border-top-left-radius: .125em;
+            padding-left: 1.4375em;
+            margin-left: 0;
+
+            &:before {
+                content: none;
+            }
+        }
+
+        &:last-child {
+            border-right-color: var(--form-border-color);
+            border-bottom-right-radius: .125em;
+            border-top-right-radius: .125em;
+            padding-right: 1.875em;
+
+            &:after {
+                content: none;
+            }
+        }
+    }
+}

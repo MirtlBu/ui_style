@@ -1,0 +1,60 @@
+<form>
+    <input type="text" class="input" value="Input">
+
+    <input type="text" class="input" value="Disabled" disabled>
+
+    <input type="text" class="input input--invalid" value="Invalid">
+
+    <label class="label label--input">
+        <div class="label--text">Label</div>
+        <input type="text" class="input" placeholder="Input with label">
+    </label>
+
+    <textarea class="input input--textarea"></textarea>
+
+    <label class="label label--checkbox">
+        <input type="checkbox" class="input" checked="">
+        <div class="label--text">Checkbox</div>
+        <div class="label--shape"></div>
+    </label>
+
+    <label class="label label--radio" for="top">
+        <input type="radio" class="input" id="top" name="radio" checked="">
+        <div class="label--text">Radio top</div>
+        <div class="label--shape"></div>
+    </label>
+    <label class="label label--radio" for="bottom">
+        <input type="radio" class="input" id="bottom" name="radio" checked="">
+        <div class="label--text">Radio bottom</div>
+        <div class="label--shape"></div>
+    </label>
+
+    <label class="label label--file">
+        <input type="file" class="input" value="File">
+        <div class="button button--blue button--small">Choose file</div> <!-- снять фокус с этой фигни по кейапу -->
+    </label>
+
+    <div class="select">
+        <select class="select--hidden">
+            <option disabled selected>Select box with long-long-long word</option>
+            <option>Option one</option>
+            <option>Option two</option>
+            <option>Option three with long word too</option>
+            <option>Option four</option>
+        </select>
+    </div>
+
+    <div class="alert alert--primary">
+        <p class="p">An example alert style. Technically this is not alert but block with more than one line of text. There will be a bunch of text. Huge and awful bunch of text. And... double it! — An example alert style. Technically this is not alert but block with more than one line of text. There will be a bunch of text. Huge and awful bunch of text.</p>
+        <div class="alert__close"></div>
+    </div>
+    <div class="alert alert--valid">
+        <p class="p">An example alert style</p>
+        <div class="alert__close"></div>
+    </div>
+    <div class="alert alert--invalid">
+        <p class="p">An example alert style</p>
+        <div class="alert__close"></div>
+    </div>
+
+</form>

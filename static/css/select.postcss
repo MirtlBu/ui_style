@@ -1,0 +1,96 @@
+.select {
+    width: 200px;
+
+    &__content {
+        border-radius: .125em;
+        display: block;
+        outline: none;
+        padding: 0 2em 0 1em;
+        border: 1px solid var(--form-border-color);
+        font-size: 1em;
+        line-height: 2.5;
+        font-weight: 400;
+        font-family: var(--main-font);
+        color: var(--gray-color-medium);
+        box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        box-sizing: border-box;
+        background-color: var(--white-color);
+        position: relative;
+        margin-right: 0;
+        outline: none;
+
+        &:focus {
+            border: 1px solid var(--valid-color-medium);
+            background-color: var(--white-color) !important;
+        }
+    }
+
+    &__arrows {
+        width: .5em;
+        height: 1em;
+        background-image: url(img/select-arrows.png) !important;
+        background-size: auto 1em;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 1em;
+        top: calc(50% - 1em/2);
+        cursor: pointer;
+        float: none;
+    }
+
+    &__text {
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__list {
+        position: relative;
+    }
+}
+
+.ui-menu {
+    border-radius: .125em;
+    display: block;
+    outline: none;
+    border: 1px solid var(--form-border-color);
+    font-size: 1em;
+    line-height: 2.5;
+    font-weight: 400;
+    font-family: var(--main-font);
+    color: var(--gray-color-medium);
+    box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    background-color: var(--white-color);
+    padding: 0 !important;
+
+    &-item  {
+
+        &:hover {
+            color: var(--white-color);
+            background-color: var(--blue-color-medium);
+        }
+
+        & .ui-menu-item-wrapper {
+            display: block;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden; /* crash on edge, damn! */
+            text-overflow: ellipsis;
+            -ms-overflow-style: none;
+            padding: 0 1em;
+            box-sizing: border-box;
+        }
+    }
+
+    & .ui-state-focus, & .ui-state-active {
+        margin: 0;
+        color: var(--white-color);
+        background-color: var(--blue-color-medium);
+    }
+
+    & .ui-state-disabled {
+        color: var(--form-disabled-color);
+    }
+}

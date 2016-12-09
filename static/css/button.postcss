@@ -1,0 +1,76 @@
+.button {
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: var(--main-font);
+    -webkit-font-smoothing: antialiased;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: .125em;
+
+    &:hover, &:focus {
+        color: var(--white-color);
+    }
+
+    &--blue {
+        color: var(--blue-color-medium);
+        border-color: var(--blue-color-medium);
+
+        &:hover, &:focus {
+            background-color: var(--blue-color-medium);
+            border-color: var(--blue-color-medium);
+        }
+    }
+
+    &--active {
+        color: var(--white-color);
+    }
+
+    &--blue&--active {
+        background-color: var(--blue-color-dark);
+        border-color: var(--blue-color-dark);
+    }
+
+    &--gray {
+        color: var(--gray-color-medium);
+        border-color: var(--gray-color-medium);
+
+        &:hover, &:focus {
+            background-color: var(--gray-color-medium);
+            border-color: var(--gray-color-medium);
+        }
+    }
+
+    &--gray&--active {
+        background-color: var(--gray-color-dark);
+        border-color: var(--gray-color-dark);
+    }
+
+    &--small {
+        font-size: .875em;
+        line-height: calc(2.857142857142857em - 4px);
+        min-width: 140px;
+        padding: 0 10px;
+    }
+
+    &--medium {
+        font-size: 1em;
+        line-height: calc(3.125em - 4px);
+        min-width: 220px;
+        padding: 0 15px;
+    }
+
+    &--big {
+        font-size: 1.25em;
+        line-height: calc(3em - 4px);
+        min-width: 280px;
+        padding: 0 20px;
+    }
+}
+

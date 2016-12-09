@@ -1,0 +1,70 @@
+.main {
+    width: 940px;
+    margin: 0 auto;
+    padding: 55px 0;
+    box-sizing: border-box;
+
+    &__h1 {
+        font-size: 59px;
+        line-height: 70px;
+        font-weight: 100;
+        color: #555;
+        margin-bottom: 55px;
+    }
+
+    &__h2 {
+        font-size: 28px;
+        line-height: 70px;
+        font-weight: 200;
+        color: #444;
+    }
+
+    &__section {
+        margin-bottom: 40px;
+    }
+
+    & .flex {
+        display: flex;
+        justify-content: flex-start;
+
+        &--col {
+            flex-direction: column;
+
+            & > * {
+                align-items: flex-start;
+                margin-bottom: 15px;
+                display: flex;
+
+                & > * {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        & > * {
+            margin-right: 15px;
+        }
+    }
+
+    & .input {
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    & .label:not(.label--file) {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    & .select {
+        margin-top: 15px;
+    }
+
+    & .alert {
+        margin-top: 15px;
+    }
+
+    & .pagination {
+        margin-top: 15px;
+    }
+}

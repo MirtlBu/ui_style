@@ -1,0 +1,43 @@
+.pagination {
+    font-size: 0;
+
+    &__item {
+        line-height: 3.125em;
+        height: 3.125em;
+        color: var(--gray-color-dark);
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--main-font);
+        padding: 0 1.5625em;
+        box-sizing: border-box;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        @apply --thin-border;
+        border-color: var(--form-border-color);
+        margin-left: -1px;
+        outline: none;
+
+        &:hover, &:focus {
+            color: var(--white-color);
+            background-color: var(--blue-color-medium);
+            border-color: var(--blue-color-medium);
+        }
+
+        &--active, &--active:hover, &--active:focus {
+            color: var(--white-color);
+            background-color: var(--blue-color-dark);
+            border-color: var(--blue-color-dark);
+        }
+
+        &:first-child {
+            border-bottom-left-radius: .125em;
+            border-top-left-radius: .125em;
+        }
+
+        &:last-child {
+            border-bottom-right-radius: .125em;
+            border-top-right-radius: .125em;
+        }
+    }
+}
